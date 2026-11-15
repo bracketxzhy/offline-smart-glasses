@@ -1,0 +1,11 @@
+# XIAO wireless image/audio streaming
+
+The user requests operation with an independent supply, and explicitly selected the board AP while temporarily disconnecting the computer from SCUNET. Keep USB attached through backup, flashing and the first actual wireless test. Only then announce readiness to unplug. Independently powered operation is unverified until the user switches supply and the wireless test is repeated.
+
+Extend the existing SGA1 framed JPEG/16-kHz mono PCM protocol onto a single TCP connection on the existing development AP XIAO-S3-1984, address 192.168.4.1, port 3333. Retain the existing development AP password rather than touching saved campus credentials. A single foreground client owns acquisition; camera and microphone tasks serialize complete packets. Close failed streams rather than sending a later packet after a partial write. Boot does not require a USB serial monitor. A small HTTP status endpoint exposes readiness independently of the streaming client. USB remains diagnostic in this separate wireless sketch; the existing USB sketch remains available for explicit restoration.
+
+Add an explicit xiao_wifi sensor configuration. Validate protocol, device MAC and PCM format before accepting media. Bound packet buffering using the existing parser. Camera and audio controls operate independently; releasing both closes the socket. Connection failure, stale frames and loss of the status heartbeat are explicit errors, without automatic source substitution or reconnection. Use shared sensor adapters named for the interface rather than USB; no legacy aliases.
+
+Verify with local TCP-server tests for fragmented input, device mismatch, invalid PCM, EOF, partial control shutdown, and stopping with a failed connection. Compile the actual installed Arduino ESP32 3.3.12 target. Preserve two identical full-flash readbacks and hashes before flashing. Verify actual AP identity and at least 20 seconds of simultaneous wireless JPEG/PCM, then restore SCUNET with an independent watchdog. Retain numeric evidence, not raw media. Preserve the report's historical USB results; wireless results are a separate experiment.
+
+Alternatives: STA joining SCUNET requires network provisioning/authentication; not chosen. BLE is unsuitable for this JPEG/PCM stream. The selected AP needs no campus credentials and matches the earlier hardware setup.

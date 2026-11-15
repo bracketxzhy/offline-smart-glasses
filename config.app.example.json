@@ -1,0 +1,28 @@
+{
+  "sensor_source": "local",
+  "xiao_usb": {
+    "port": "auto",
+    "vid": 12346,
+    "pid": 4097,
+    "expected_mac": "02:00:00:00:00:01",
+    "audio_gain": 1.0
+  },
+  "xiao_wifi": {
+    "host": "192.168.4.1",
+    "port": 3333,
+    "expected_mac": "02:00:00:00:00:01",
+    "audio_gain": 1.0
+  },
+  "camera_source": 0,
+  "camera_fps": 3,
+  "audio_input_device": null,
+  "audio_output_device": null,
+  "wake_phrase": "你好助手",
+  "wake_required": true,
+  "threads": 2,
+  "vlm_url": "http://127.0.0.1:8081",
+  "profile_database": "database/smart_glasses.db",
+  "portraits_directory": "database/images",
+  "portrait_sync_seconds": 2,
+  "identity_name_ids": {}
+}

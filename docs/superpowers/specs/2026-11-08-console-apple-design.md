@@ -1,0 +1,9 @@
+# Local console and report evidence
+
+User-selected reference: VoltAgent/awesome-design-md, design-md/apple/DESIGN.md. Apply its white/parchment surfaces, near-black text, single Action Blue, SF/system typography, 18px utility cards and pill actions. No gradients, decorative shadows, external fonts, CDN dependencies, or simulated device/model states. Adapt the marketing reference into an operational console rather than a product storefront.
+
+Preserve existing local API contracts and operations: independent camera/voice controls, Chinese queries, explicit architecture selection, speech checkbox, response/route/timing details, gallery synchronization and visible errors. Use actual API state for service/model/sensor/database readiness; capture off is standby, not a connection success. English interface labels make the screenshot readable in the English report; Chinese input and answers remain supported. Keep enrollment internals in a disclosure rather than the main workflow. Responsive layout and keyboard focus are required.
+
+Remove absolute experiment dates from the compiled report, including the cover's report-date field. Preserve model-release identifiers and relative future-work weeks. Add one real browser screenshot of the implemented local console and a short implementation description; no fabricated measurements or live-camera claim. All PDF pages remain portrait A4 and the final document must stay within 14--16 pages.
+
+Validation: JavaScript syntax check, actual browser controls/errors, desktop and narrow viewport layout, API-driven state, screenshot artifact, clean LaTeX compilation, no experiment dates in extracted PDF, consistent A4 geometry and updated Overleaf ZIP. This is a reversible UI reskin; meaningful browser checks replace implementation-mirroring snapshot unit tests.
