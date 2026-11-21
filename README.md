@@ -1,4 +1,25 @@
-# 离线智能眼镜
+# Offline Smart Glasses · 离线智能眼镜
+
+**Local multimodal inference · Python · OpenCV / ONNX Runtime · ESP32-S3 firmware**
+
+XIAO ESP32-S3 Sense streams camera and microphone input over USB or Wi-Fi to a local computing host. The host runs object detection, face recognition, speech recognition, visual question answering, and speech output.
+
+**Status:** prototype with Windows setup, a local web console, transport code, and tests. Raspberry Pi migration is documented; real Pi latency, thermal stability, battery life, and wearable reliability still need measurement. First-time model downloads require internet access.
+
+![Documented vision architecture](figures/offline_smart_glasses_vision_pipeline.png)
+
+| Component | Source |
+| --- | --- |
+| Vision inference | [glasses/vision.py](glasses/vision.py) |
+| Speech | [glasses/speech.py](glasses/speech.py) |
+| Visual question answering | [glasses/vlm.py](glasses/vlm.py) |
+| Service integration | [glasses/service.py](glasses/service.py) |
+| Capture firmware | [hardware/xiao-esp32s3/](hardware/xiao-esp32s3) |
+| Evaluation boundaries | [Raspberry Pi migration](docs/raspberry-pi-migration.md) |
+
+The illustration documents the architecture; it does not establish measured performance. Local use requires your own models, device configuration, and authorized face-enrolment data.
+
+## 中文使用说明
 
 XIAO ESP32-S3 Sense 通过 Wi-Fi 或 USB 采集图像和音频，主机在本地完成中文语音识别、物体检测、人脸识别、视觉问答和语音播报。
 
